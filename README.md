@@ -1,3 +1,7 @@
+![Zrzut ekranu 2024-12-03 180051](https://github.com/user-attachments/assets/7b0afd98-4037-40af-a06c-9c1a19b669db)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
