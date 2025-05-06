@@ -1,0 +1,2577 @@
+/*
+	Name: Reset Stylesheet
+	Description: Resets browser's default CSS
+	Author: Eric Meyer
+	Author URI: http://meyerweb.com/eric/tools/css/reset/
+*/
+
+/* v1.0 | 20080212 */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*--------------------------------------------------------------------------*/
+
+:root {
+  --stopTop: 0vh;
+  --stopLeft: 0vw;
+  --stopRight: 0vw;
+  --startLeftAnimation: 90vw;
+  --startTopAnimation: 90vh;
+  --width: 0vw;
+  --backgroundColor: rgb(0, 31, 23);
+  --backgroundColor2: rgb(251, 232, 27);
+  --backgroundColor3: rgb(0, 42, 31);
+  --fontColor: rgb(255, 255, 255);
+  --batoonColor: rgb(0, 85, 68);
+  --opuznienie: 0s;
+  --visibility: visible;
+}
+@font-face {
+  font-family: 'rubiklight_italic';
+  src: url('C:\Users\kanan\Desktop\Projekt_Portfolio\Portfolio\portfolio\public\fonts\rubik-italic-variablefont_wght-webfont.woff2') format('woff2'),
+       url('C:\Users\kanan\Desktop\Projekt_Portfolio\Portfolio\portfolio\public\fonts\rubik-italic-variablefont_wght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'rubiklight';
+  src: url('C:\Users\kanan\Desktop\Projekt_Portfolio\Portfolio\portfolio\public\fonts\rubik-variablefont_wght-webfont.woff2') format('woff2'),
+       url('C:\Users\kanan\Desktop\Projekt_Portfolio\Portfolio\portfolio\public\fonts\rubik-variablefont_wght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--backgroundColor2);
+  height: 98vh;
+  font-family: "rubiklight";
+  color: var(--fontColor);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Webkit Browsers */
+::-webkit-scrollbar {
+  background-color: var(--backgroundColor2);
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--backgroundColor);
+  border-radius: 5px;
+  border: 2px solid var(--backgroundColor2);
+}
+::-webkit-scrollbar-corner{
+  color: var(--backgroundColor2);
+}
+::-webkit-scrollbar:horizontal{
+  height: 10px;
+}
+.menuItem {
+  background-color: var(--backgroundColor);
+}
+nav {
+  width: 100vw;
+  height: 4vh;
+  color: #000000;
+  padding-top: 1vh;
+  padding-right: 10vw;
+  padding-bottom: 1vh;
+  display: block;
+  background-color: var(--backgroundColor);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: var(--backgroundColor2);
+  z-index: 10000;
+  position: fixed;
+}
+nav > .logo {
+  width: 6vh;
+  height: 6vh;
+  margin-top: 0.2vh;
+  margin-left: 2vw;
+  display: inline-block;
+  z-index: 1002;
+}
+nav > .logo > img{
+  height: 100%;
+} 
+.nawNormal {
+  margin-top: -5vh;
+  float: right;
+  min-width: 10px;
+  min-height: 10px;
+  padding: 0;
+  list-style: none;
+  animation-name: menuAnimate;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  z-index: 10002;
+}
+li {
+  min-width: 0.1vw;
+  min-height: 0.1vh;
+  text-align: center;
+  display: inline-block;
+  z-index: 100001;
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--fontColor);
+  margin-left: 15px;
+  text-align: center;
+  padding: 0.2vh;
+}
+li > img {
+  display: "inline-block";
+  width: 0.8vw;
+  float: left;
+  margin-left: 0.3vw;
+}
+.styleP {
+  display: "inline-block";
+  margin: auto;
+  font-size: 0.8vw;
+  text-decoration: "none";
+  float: left;
+  margin-left: 0.3vw;
+  margin-right: 0.3vw;
+  text-shadow: 2px 1px 2px black;
+}
+li:hover {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--fontColor);
+  margin-bottom: -5px;
+  transform: scale(1.1, 1.1);
+}
+li:active {
+  background:var(--backgroundColor);
+  background: linear-gradient(
+    0deg,
+    var(--backgroundColor) 0%,
+    var(--fontColor) 99%
+  );
+}
+section {
+  font-weight: 700;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 4vh;
+  display: block;
+  font-size: 4em;
+  background-color: var(--backgroundColor);
+  position: static;
+}
+article {
+  width: 100%;
+  min-height: 96vh;
+  background-color: var(--backgroundColor);
+  padding-top: 1vw;
+}
+.container {
+  width: 70vw;
+  height: 90.9vh;
+  padding-top: 1vh;
+  float: left;
+}
+.container2 {
+  width: 30vw;
+  height: 90.9vh;
+  padding-top: 1vh;
+  float: left;
+  z-index: 999;
+}
+.imgStyle {
+  clear: both;
+  display: block;
+  float: right;
+  position: fixed;
+  width: 25vw;
+  margin-left: 70vw;
+  z-index: 1000;
+  animation-name: headAnimate;
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  background-color: var(--backgroundColor);
+  border-top-left-radius: 240px;
+}
+.reactIcon {
+  visibility: hidden;
+  width: 300px;
+  height: 300px;
+  z-index: 992;
+  position: absolute;
+  --stopTop: 100px;
+  --stopLeft: 100px;
+  margin-top: 70vh;
+  margin-left: 40vw;
+  animation-name: moveIcon;
+  animation-delay: 0.6s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.cssIcon {
+  visibility: hidden;
+  width: 300px;
+  z-index: 991;
+  position: absolute;
+  --stopTop: 377px;
+  --stopLeft: 100px;
+  margin-top: 70vh;
+  margin-left: 40vw;
+  animation-name: moveIcon;
+  animation-delay: 1.6s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.htmlIcon {
+  visibility: hidden;
+  width: 237px;
+  z-index: 993;
+  position: absolute;
+  --stopTop: 40px;
+  --stopLeft: 162px;
+  margin-top: 70vh;
+  margin-left: 40vw;
+  animation-name: moveIcon;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.jsIcon {
+  visibility: hidden;
+  width: 71px;
+  z-index: 994;
+  position: absolute;
+  position: fixed;
+  --stopTop: 22px;
+  --stopLeft: 70px;
+  animation-name: moveIcon;
+  animation-delay: 3s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition-duration: 1s;
+}
+.jsAnimate {
+  animation-name: animateJsIcon 10s infinite;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition-duration: 1s;
+}
+.mysqlIcon {
+  visibility: hidden;
+  width: 6vw;
+  z-index: 994;
+  position: fixed;
+  --stopTop: -2vh;
+  --stopLeft: -18vw;
+  margin-top: 70vh;
+  margin-left: 40vw;
+  animation-name: moveIcon;
+  animation-delay: 0.8s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition-duration: 1s;
+}
+.cIcon {
+  visibility: hidden;
+  width: 4vw;
+  max-width: 150px;
+  z-index: 994;
+  position: fixed;
+  --stopTop: -10vh;
+  --stopLeft: 25vw;
+  margin-top: 70vh;
+  margin-left: 40vw;
+  animation-name: moveIcon;
+  animation-delay: 0.8s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition-duration: 1s;
+}
+.jqueryIcon {
+  visibility: hidden;
+  width: 5vw;
+  z-index: 994;
+  position: fixed;
+  --stopTop: 20vh;
+  --stopLeft: -10vw;
+  animation-name: moveIcon;
+  animation-delay: 1.2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition-duration: 1s;
+}
+.phpIcon {
+  visibility: hidden;
+  width: 5vw;
+  max-width: 250px;
+  z-index: 994;
+  position: fixed;
+  --stopTop: 40vh;
+  --stopLeft: -18vw;
+  animation-name: moveIcon;
+  animation-delay: 1.2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition-duration: 1s;
+}
+.githubIcon {
+  width: 2vw;
+  max-width: 100px;
+  --stopTop: 1vh;
+  --stopLeft: -7.5vw;
+  z-index: 994;
+  float: left;
+  position: relative;
+  float: left;
+  cursor: pointer;
+  transition-duration: 1s;
+  visibility: hidden;
+  animation-name: moveMediaIcon;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.fbIcon {
+  width: 2vw;
+  max-width: 100px;
+  --stopTop: 1vh;
+  --stopLeft: -10vw;
+  z-index: 994;
+  position: relative;
+  float: left;
+  cursor: pointer;
+  transition-duration: 1s;
+  visibility: hidden;
+  animation-name: moveMediaIcon;
+  animation-delay: 0.4s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.inIcon {
+  width: 2vw;
+  max-width: 100px;
+  z-index: 994;
+  position: relative;
+  float: left;
+  cursor: pointer;
+  --stopTop: 1vh;
+  --stopLeft: -5vw;
+  visibility: hidden;
+  animation-name: moveMediaIcon;
+  animation-delay: 0.6s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition-duration: 1s;
+}
+.wpIcon {
+  visibility: hidden;
+  width: 10vw;
+  max-width: 200px;
+  z-index: 994;
+  position: fixed;
+  --stopTop: 65vh;
+  --stopLeft: -12vw;
+  animation-name: moveIcon;
+  animation-delay: 1.4s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition-duration: 1s;
+}
+.javaIcon {
+  visibility: hidden;
+  width: 4vw;
+  max-width: 100px;
+  z-index: 994;
+  position: fixed;
+  --stopTop: 40vh;
+  --stopLeft: 22vw;
+  animation-name: moveIcon;
+  animation-delay: 2.7s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition-duration: 1s;
+}
+
+.vsIcon {
+  visibility: hidden;
+  width: 5vw;
+  max-width: 100px;
+  z-index: 994;
+  --stopTop: 45vh;
+  --stopLeft: -2vw;
+  position: fixed;
+  animation-name: moveIcon;
+  animation-delay: 2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition-duration: 1s;
+}
+.icon{
+  z-index: 10000;
+}
+.icon:hover {
+  transform: rotate(1turn);
+  cursor: pointer;
+}
+.vcIcon {
+  --width: 5vw;
+  width: var(--width);
+  visibility: hidden;
+  position: fixed;
+  max-width: 100px;
+  z-index: 9999;
+  --stopTop: -10vh;
+  --stopLeft: -5vw;
+  animation-name: moveIcon;
+  animation-delay: 2.2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition-duration: 1s;
+}
+.jsonIcon {
+  --width: 10vw;
+  width: var(--width);
+  visibility: hidden;
+  position: fixed;
+  max-width: 150px;
+  z-index: 994;
+  --stopTop: 60vh;
+  --stopLeft: 10vw;
+  animation-name: moveIcon;
+  animation-delay: 2.4s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition-duration: 1s;
+}
+.icon:hover {
+  transform: rotate(1turn);
+  cursor: pointer;
+}
+.container2 > p {
+  color: var(--fontColor);
+  font-size: 1.2vw;
+  width: 125%;
+  margin-left: -15vw;
+  text-shadow: 2px 1px 3px black;
+  animation-name: textAnimate;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.container > .containerFour {
+  display: block;
+  margin-top: 20vh;
+  max-height: 40vh;
+}
+.container > .containerFour > h1 {
+  color: var(--fontColor);
+  width: 70vw;
+  float: left;
+  text-shadow: 2px 1px 3px black;
+  font-size: 2vw;
+  display: block;
+}
+.container > .containerFour > .p2 {
+  color:var(--fontColor);
+  width: 50vw;
+  margin-right: 2vw;
+  margin-top: 2vh;
+  font-size: 1.2vw;
+  text-shadow: 2px 1px 3px black;
+  text-align: justify;
+  white-space: pre-line;
+  font-weight: 400;
+  display: inline-block;
+}
+.socialMedia > img {
+  --stopTop: 2vh;
+  --stopLeft: 3vw;
+  animation-name: moveMediaIconTwo;
+  
+}
+.container > p {
+  margin-top: 5vh;
+}
+.container > :last-child {
+  font-weight: 600;
+}
+.container2 > :first-child {
+  margin-top: 25vh;
+  color: var(--fontColor);
+  text-shadow: 2px 1px 3px black;
+  font-size: 2.0vw;
+  z-index: 999;
+}
+
+.container3 {
+  margin-top: 15vh;
+  margin-left: 25vw;
+  width: 400px;
+  height: 400px;
+}
+.containerFive {
+  width: 90vw;
+  min-height: 83.8vh;
+  margin-left: 5vw ;
+  margin-right: 5vw ;
+  padding-left: 2vw;
+  padding: 2vw;
+  background-size: 30vw;
+  background-color: var(--backgroundColor);
+  background-image: url(C:\Users\kanan\Desktop\Projekt_Portfolio\Portfolio\portfolio\src\components\images\on_the_cheir1.png); 
+  background-position: bottom 10px right 10px;
+  background-repeat: no-repeat;
+}
+.containerFive:hover{
+  background-image: url(C:\Users\kanan\Desktop\Projekt_Portfolio\Portfolio\portfolio\src\components\images\on_the_cheir2.png); 
+}
+.containerFive > p {
+  visibility: hidden;
+  font-size: 1.2vw;
+  color:var(--fontColor);
+  text-shadow: 2px 1px 3px black;
+  width: 100%;
+  animation-name: textAnimate2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+.containerSix{
+  width: 100%;
+  min-width: 3.5vw;
+}
+.containerSeven{
+  visibility: hidden;
+  --stopRight: 1vw;
+  --stopLeft: 1vw;
+  width: 2.5vw;
+  display: inline-block;
+  text-align: center;
+  animation-name: moveSkillIcon;
+  animation-duration: 1s;
+  animation-delay: calc (var(--opuznienie) + 5);
+  animation-fill-mode: forwards;
+}
+.containerSeven> img{
+  width: 100%;
+}
+.containerSeven> p{
+  font-size: 0.6vw;
+  color: var(--fontColor);
+  text-shadow: 2px 1px 3px black;
+}
+.containerFive > .project{
+  margin-top: 2vh;
+  font-size: 3vw;
+}
+.containerFive > .experience{
+  text-align: center;
+  margin-top: 2vh;
+  font-size: 1vw;
+}
+.containerWorks{
+  width: 100vw;
+  position: absolute;
+  background-color: var(--backgroundColor);
+  height: 100%;
+  min-height: 100%;
+}
+.containerFourteen {
+  position: relative;
+  display: block;
+  width: 100vw;
+  min-height: 22vw;
+  text-align: center;
+  background-color: var(--backgroundColor);
+  font-size: 2vw;
+}
+.first {
+  position: static;
+  display: block;
+  min-height: 22vw;
+  padding-bottom: 2vw;
+  width: 100vw;
+  text-align: center;
+  background-color: var(--backgroundColor);
+  margin-top: 1vh;
+  font-size: 2vw;
+}
+
+.containerFourteen > .containerTwelve{
+  width: 90vw;
+  min-height: 50vh;
+  display: block;
+  text-align: center;
+}
+.containerFourteen > .containerTwelve > p{
+  margin-top: 1vh;
+  width: 90vw;
+  color: var(--fontColor);
+  display: block;
+  font-size: 1.5vw;
+}
+.containerThirteen{
+  width: 100vw;
+  font-size: 2vw;
+  color: var(--fontColor);
+  text-align: center;
+}
+.containerFourteen > .containerThirteen{
+  width: 100%;
+}
+.containerFourteen > .containerThirteen > p{
+  font-size: 2.2vw;
+  color: var(--fontColor);
+}
+.containerNine{
+  margin-top: 5vh;
+  display: inline-block;
+  width: 15vw;
+  height: 15.5vw;
+  margin-bottom: 1vh;
+  margin-right: 2vw;
+  transform: translate(0px, 0px)  rotate(-5deg) skew(-5deg);
+}
+.containerNine:hover{
+  cursor: pointer;
+  transform: translate(0px, 0px)  rotate(-1deg) skew(-1deg);
+}
+.containerNine:hover .phone{
+  margin-top: 1vw;
+  transform: scale(0.4,0.4) translate(0px, -10vw);
+} 
+.containerNine:hover .containerFifteen{
+  opacity: 1;
+} 
+.containerNine:hover .containerSeven{
+  visibility: visible;
+} 
+.block{
+  display: block;
+  position: absolute;
+  width: 15vw;
+  z-index: 100;
+}
+.block> img{
+  width: 100%;
+}
+.phone{
+  position: absolute;
+  display: block;
+  text-align: center;
+  z-index: 101;
+  margin-top: 1.5vw;
+  margin-left: 4vw;
+  width: 7vw;
+  transition: all 0.010s linear;
+}
+.phone> img {
+  width: 100%;
+}
+.containerFifteen {
+  position: absolute;
+  margin-top: 7vw;
+  margin-left: 1vw;
+  width: 13.4vw;
+  z-index: 200;
+  border-top: 1px solid var(--backgroundColor2);
+  background-color: var(--backgroundColor);
+  opacity: 0;
+  transition: all  0.010s ease-in-out;
+}
+.containerFifteen > p{
+  text-align: left;
+  width: 12vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  color: var(--fontColor);
+  font-size: 0.6vw;
+  margin-top: 1vh;
+  white-space: pre-wrap;
+}
+.containerFifteen > .containerSeven {
+  width: 1.5vw;
+  font-size: 0.5;
+  text-align: center;
+  animation: none;
+  margin-left: 0.5vw;
+}
+.containerFifteen > .containerSeven > p{
+  font-size: 0.4vw;
+}
+.containerFourteen > .containerTwelve> .containerNine > img{
+  width: 100%;
+}
+
+.containerFourteen > .containerNine > .two{
+  margin-left: 2vw;
+}
+.containerSexteen{
+  width: 50vw;
+  margin-left: 5vw;
+  height: 35vh;
+  padding-top: 1vh;
+  color: var(--fontColor);
+  font-size: 1.8vw;
+}
+.containerTwentyTwo {
+  width: 40vw;
+  height: 80vh;
+  margin-left: 0vw;
+  margin-right: 0vw;
+  text-align: center;
+  float: right;
+  position: relative;
+  text-align: center;
+  --visibility: hidden;
+  visibility: (--visibility);
+  --stopTop: -70vh;
+  --stopLeft: 0vw;
+  --startLeftAnimation: 120vw;
+  --startTopAnimation: 90vh;
+  margin-left: var(--startLeftAnimation);
+  animation-name: animationShifted;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.containerTwentyTwo> img{
+  height: 80vh;
+  transform: translate(0px, 0px)  rotate(1.5deg) skew(2deg);
+}
+.containerSexteen> h1 {
+  color: var(--fontColor);
+  font-size: 2.3vw;
+}
+.containerSexteen> .contact{
+  margin-top: 4vh;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  width: 60vw;
+  height: 2.7vh;
+}
+.containerTwenty{
+  clear: both;
+  margin-right: 1vw;
+  text-align: center;
+  width: 50vw;
+  height: 30vh;
+  position: static;
+  z-index: 999;
+  text-align: center;
+  --visibility: hidden;
+  visibility: (--visibility);
+  --stopTop: auto;
+  --stopLeft: 5vw;
+  --startLeftAnimation: -100vw;
+  --startTopAnimation: 90vh;
+  margin-left: var(--startLeftAnimation);
+  animation-name: animationShifted;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+input[type=text]{
+  width: 10vw;
+  height: 20px;
+  padding: 12px 20px;
+  margin: 1vh;
+  margin-right: 1vw;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: var(--batoonColor);
+  font-size: 16px;
+  color: var(--fontColor);
+}
+textarea{
+  width: 70%;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: var(--batoonColor);
+  font-size: 16px;
+  resize: none;
+  color: var(--backgroundColor2);
+}
+input[type=button], input[type=submit], input[type=reset]{
+  background-color: var(--backgroundColor);
+  color: var(--backgroundColor1);
+  width: 8vh;
+  height: 2vw;
+  margin-top: 1vh;
+  margin-right: 10%;
+  font-size: 1.8vh;
+  float: right;
+  border: none;
+  color: var(--fontColor);
+  text-align: center;
+}
+input[type=submit]:hover{
+  border: 1px solid var(--fontColor);
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+.socialMedia{
+  margin-top: 4vh;
+  margin-left: 2vw;
+}
+.containerSexteen > .socialMedia{
+  margin-left: 15vw;
+}
+.containerFour > .socialMedia{
+  margin-left: 12vw;
+}
+
+.contact> a{
+  color: var(--fontColor);
+  font-size: 1.2vw;
+  margin-top: 0.7vh;
+  margin-left: 4vw;
+  position: absolute;
+  text-decoration: none;
+}
+.contact> img{
+  width: 1.8vw;
+  position: absolute;
+}
+.containerTen{
+  width: 25vw;
+  min-height: 2vh;
+  float: left;
+}
+.containerEleven{
+  width: 25vw;
+  float: right;
+  min-height: 2vh;
+}
+.containerEleven > .applicationData{
+  clear: both;
+  color: var(--fontColor);
+  font-size: 1vw;
+  min-width: 25vw;
+  min-height: 2vh;
+  text-align: left;
+}
+.containerEleven > .applicationData > p{
+  margin-top: 0.5vh;
+  display: inline-block;
+  margin-left: 0.5vw;
+}
+footer {
+  width: 100vw;
+  height: 2vh;
+  display: block;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  font-size: 1.2vh;
+  color: var(--fontColor);
+  background-color: var(--backgroundColor);
+  padding-top: 0.4vh;
+  z-index: 10000;
+}
+
+footer> p {
+  display: inline;
+}
+footer> p> a{
+  text-decoration: none;
+  color: var(--fontColor);
+}
+footer> .privacyPolicy{
+  cursor: pointer;
+}
+.hamburger{
+  width: 6vh;
+  height: 6vh;
+  margin-top: 0.7vh;
+  z-index: 1010;
+  float: right;	
+  text-align: center;
+  background-color: var(--backgroundColor);
+  border: 1px solid var(--backgroundColor2); 
+  border-radius: 10px 10px 10px 10px;
+  visibility: hidden;
+  margin-right: -5vw;
+}
+.containerSeventeen{
+  width: 30vw;
+  height: 85.8vh;
+  display: block;
+  float: left;
+  position: static;
+  background-color: var(--backgroundColor);
+  text-align: center;
+  --stopTop: 0vh;
+  --stopLeft: 5vw;
+  --startLeftAnimation: -50vw;
+  --startTopAnimation: 90vh;
+  margin-left: var(--startLeftAnimation) ;
+  animation-name: animationShifted;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.containerSeventeen> .imgStyle2{
+  margin-top: 5%;
+  height: 80%;
+  background-color: var(--backgroundColor);
+  z-index: 100000;
+  animation-name: headAnimate;
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transform: translate(0px, 0px)  rotate(-5deg) skew(-5deg);
+
+}
+.containerEighteen {
+  width: 50vw;
+  height: 85.4vh;
+  padding-top: 20vh;
+  font-size: 0.8vw;
+  color: var(--fontColor);
+  text-align: center;
+  float: right;
+  --visibility: hidden;
+  visibility: (--visibility);
+  --stopTop: 0vh;
+  --stopLeft: 5vw;
+  --startLeftAnimation: -100vw;
+  --startTopAnimation: 80vh;
+  margin-left: var(--startLeftAnimation);
+  animation-name: animationShifted;
+  animation-delay: 0.10s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+ 
+  margin-right: 7vw;
+}
+.containerEighteen> .containerFour> h1 {
+  font-size: 1.2vw;
+  width: 50vw;
+  text-align: center;
+  margin-top: 5vh;
+  font-family: "Lato";
+}
+.containerEighteen> .containerFour> p{
+  margin-top: 5vh;
+  white-space: pre-wrap;
+  line-height: 150%;
+  text-align: justify;
+}
+.containerEighteen> .containerFour> .socialMedia{
+  margin-left: 32vw;
+}
+.containerTwenty> form> label{
+  font-size: 1vw;
+  color: var(--fontColor);
+}
+.containerTwenty> form{
+  font-size: 1.5vw;
+  color: var(--fontColor);
+}
+a{
+  cursor: pointer;
+}
+.title{
+  width: 100%;
+  position: static;
+  padding: 2px;
+  display: flex;
+  justify-content: center; 
+  --stopTop: 0;
+  --stopLeft: 0vw;
+  --startLeftAnimation: 90vw;
+  --startTopAnimation: 90vh;
+  margin-left: var(--startLeftAnimation) ;
+  animation-name: animationShifted;
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.title > img{
+  display: inline-block;
+  width: 2vw;
+  height: 2vw;
+}
+.title> h1{
+  display: inline-block;
+  font-size: 2.5vw;
+  margin-left: 1vw;
+  color: var(--fontColor);
+}
+.containerTwentyThry{
+  width: 90vw;
+  height: 105vh;
+  position: relative;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 1vw; 
+  text-align: left;
+}
+.containerTwentyThry> h3{
+  font-size: 2vw;
+  text-align: center;
+}
+.containerTwentyThry> h4{
+  margin-top: 1vh;
+  font-size: 1vw;
+  margin-left: 5vw;
+}
+.containerTwentyThry> p{
+  margin-top: 1vh;
+  font-size: 0.8vw;
+  text-align: justify;
+}
+.announcementGdpr{
+  width: 100vw;
+  min-height: 30px;
+  position: fixed;
+  padding: 1vw;
+  bottom: 0;
+  z-index: 100000;
+  text-align: justify;
+  background-color: var(--backgroundColor);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: var(--backgroundColor2);
+  font-size: 15px;
+}
+.announcementGdprTwo{
+  width: 100%;
+  margin-top: 10px;
+  min-height: 10px;
+  text-align: center;
+}
+.announcementGdprHidden{
+  visibility: hidden;
+}
+.announcementGdprTwo> :first-child{
+  margin-right: 1vh;
+}
+.myButton{
+  border: none;
+  background-color: var(--batoonColor);
+  color: var(--fontColor);
+  cursor: pointer;
+}
+.containerTwentyFour{
+  width: 50vw;
+  min-height: 20px;
+  padding: 1vw;
+  margin-bottom: 1vh;
+  margin-left: 5vw;
+  margin-right: 1vw;
+  font-size: 15px;
+  color: var(--backgroundColor2);
+  text-align: justify;
+  --visibility: hidden;
+  visibility: (--visibility);
+  --stopTop: 0vh;
+  --stopLeft: 5vw;
+  --startLeftAnimation: -100vw;
+  --startTopAnimation: 90vh;
+  margin-left: var(--startLeftAnimation);
+  animation-name: animationShifted;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+/*-----------------------------------------------------
+-------------------------------------------------------*/
+@media only screen and (max-width: 2002px) {
+  .containerSeventeen{
+    width: 31vw;
+    margin-left: 2vw;
+    
+  }
+  .containerEighteen{
+    width: 50vw;
+    margin-right: 6vw;
+    margin-left: 2vw;
+    font-size: 1.1vw;
+  }
+  .containerFour{
+    margin-top: -10vh;
+  }
+  .containerSexteen{
+    margin-top: 1vw;
+    width: 50vw;
+    height: 30vh;
+  }
+  .containerTwentyTwo{
+    float: right;
+    width: 25vw;
+    margin-right: 5vw;
+    --visibility: hidden;
+    visibility: (--visibility);
+    --stopTop: -80vh;
+    --stopLeft: 30vw;
+    --startLeftAnimation: -100vw;
+    --startTopAnimation: 90vh;
+    margin-left: var(--startLeftAnimation);
+    animation-name: animationShifted;
+    animation-delay: 0.7s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  .first{
+    margin-top: 2vw;
+  }
+  .imgStyle {
+    border-top-left-radius: 50px;
+  }
+  article{
+    padding: 0vw;
+    min-height: 94vh;
+  }
+  .title{
+    min-height: 10px;
+    position: relative;
+    text-align: center;
+  }
+  .title > img{
+    margin-top: 5px;
+    width: 1.9vw;
+    height: 1.9vw;
+  }
+  .containerFive> p{
+    font-size: 1vw;
+  }
+}
+@media only screen and (max-width: 1850px) {
+  @media only screen and (max-height: 1060px) {
+   .javaIcon{
+    --stopTop: 40vh;
+    --stopLeft: 32vw;
+   }
+  }
+}
+
+/*--------------------------------------------
+  --------------------------------------------*/
+@media only screen and (max-width: 1300px) {
+  .styleP{
+    font-size: 1.7vw;
+  }
+  li>p{
+    font-size: 1vw;
+  }
+  li> img{
+    width: 1.6vw;
+  }
+  .container2{
+    height: 80vh;
+  }
+  .imgStyle {
+    animation-delay: 0s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-name: headAnimate;
+    position: sticky;
+    margin-top: 0vh;
+    margin-right: 2vh;
+    border-top-left-radius: 40px;
+    z-index: 1000;
+  }
+  .reactIcon {
+    --stopTop: 100px;
+    --stopLeft: -50px;
+    height: 150px;
+    width: 150px;
+  }
+  .reactIcon:hover{
+    cursor: pointer;
+  }
+  .htmlIcon:hover{
+   margin-left: -150px;
+  }
+  .jsIcon {
+    --stopTop: 66px;
+    --stopLeft: -60px;
+    width: 35px;
+    position: absolute;
+  }
+  .htmlIcon {
+    --stopTop: 70px;
+    --stopLeft: -19px;
+    position: absolute;
+    width: 119px;
+  }
+  .cssIcon {
+    --stopTop: 238px;
+    --stopLeft: -50px;
+    position: absolute;
+    width: 150px;
+  }
+  .imgStyle {
+    position: relative;
+    margin-top: -9.4vh;
+    margin-right: 2vh;
+    border-top-left-radius: 40px;
+  }
+  .cIcon {
+    --stopTop: -10vh;
+    --stopLeft: 35vw;
+  }
+  .icon{
+    width: 6vw;
+  }
+  .jqueryIcon{
+    --stopTop: 25vh;
+    --stopLeft: 60vw;
+  }
+  .jsonIcon{
+    width: 10vh;
+    --stopTop: 50vh;
+    --stopLeft: 40vw;
+  }
+  .wpIcon{
+    width: 10vh;
+  }
+  .mysqlIcon{
+    width: 10vh;
+  }
+  .vcIcon{
+    --stopTop: -13vh;
+    --stopLeft: 12vw;
+  }
+  .imgStyle{
+    width: 20vw;
+    margin-top: -170px;
+  }
+  .container2> .socialMedia{
+    height: 4vh;
+    margin-left: -13vw;
+  }
+  .container2> .socialMedia> a> img{
+    width: 4vw ;
+    --stopTop: 2vh;
+    --stopLeft: 2vw;
+    animation-name: moveMediaIconTwo;;
+  }
+  .containerSeventeen{
+    width: 20vw;
+    margin-left: 2vw;
+  }
+  .containerSeventeen> img{
+    width: 100%;
+  }
+  .containerEighteen{
+    width: 63vw;
+    margin-right: auto;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  .containerFour{
+    margin-top: -6vh;
+  }
+  .containerFour > p{
+    font-size: 1.6vw;
+  }
+  .title{
+    font-size: 3vw;
+  }
+  .containerFifteen{
+    margin-top: 65px;
+    width: 13vw;
+    height: 8.5vw;
+  }
+  .containerTwentyThry{
+    width: 90vw;
+    min-height: 120vh;
+    position: relative;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 1vw; 
+    text-align: left;
+    margin-bottom: 15vh;
+  }
+  .containerTwentyThry> h3{
+    font-size: 2.7vw;
+    text-align: center;
+  }
+  .containerTwentyThry> h4{
+    margin-top: 1vh;
+    font-size: 2.2vw;
+    margin-left: 5vw;
+  }
+  .containerTwentyThry> p{
+    margin-top: 1vh;
+    font-size: 2vw;
+    text-align: justify;
+  }
+  .containerTwentyTwo{
+    width: 30vw;
+    height: 70vh;
+    --visibility: hidden;
+    visibility: (--visibility);
+    --stopTop: -65vh;
+    --stopLeft: 30vw;
+    --startLeftAnimation: -100vw;
+    --startTopAnimation: 90vh;
+    margin-left: var(--startLeftAnimation);
+    animation-name: animationShifted;
+    animation-delay: 0.7s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  .containerTwentyTwo> img{
+    width: 75%;
+    height: 75%;
+  }
+  .containerTwentyFour{
+    margin-top: -5vh;
+    font-size: 1vw;
+    position: relative;
+  }
+  .containerSexteen{
+    height: 40vw;
+  }
+  input[type=button], input[type=submit], input[type=reset]{
+    width: 50px;
+    height: 30px;
+    margin-top: 1vh;
+    margin-right: 3vw;
+    font-size: 15px;
+    float: right;
+    border: none;
+    color: var(--fontColor);
+    text-align: center;
+  }
+  .containerSexteen{
+    margin-top: 1vw;
+    width: 50vw;
+    height: 30vh;
+  }
+  @media only screen and (max-height: 1000px) {
+    nav{
+      height: 42px;
+      position: fixed;
+      z-index: 100000;
+    }
+    article{
+      padding-top: 62px;
+      height: 1100px;
+    }
+    .containerTwentyTwo{
+      width: 20vw;
+      height: 80vh;
+      display: block;
+      position: relative;
+      float: right;
+      --visibility: hidden;
+      visibility: (--visibility);
+      --stopTop: -600px;
+      --stopLeft: 30vw;
+      --startLeftAnimation: -100vw;
+      --startTopAnimation: 90vh;
+      margin-left: var(--startLeftAnimation);
+      animation-name: animationShifted;
+      animation-delay: 0.7s;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+    .containerTwentyTwo> img{
+      width: 75%;
+      height: 75%;
+    }
+    .containerTwentyFour{
+      display: block;
+      margin-top: -5vh;
+      font-size: 1vw;
+      position: relative;
+    }
+    .containerTwenty{
+      display: block;
+    }
+    .containerSexteen{
+      height: 20vw;
+    }
+    textarea{
+      width: 100%;
+      margin-left: auto;
+    }
+    .containerEighteen{
+      width: 60vw;
+      --stopTop: -30px;
+      --stopLeft: -5vw;
+      --startLeftAnimation: -100vw;
+      --startTopAnimation: 90vh;
+   
+    }
+    .title> img{
+      margin-top: 1px;
+    }
+    .container3> .icon{
+      position: absolute;
+    }
+    .imgStyle{
+      width: 30vw;
+      margin-right: 3vw;
+      margin-top: -50px;
+      float: right;
+    }
+    .wpIcon{
+      width: 12vw;
+      --stopTop: 65vh;
+      --stopLeft: -12vw;
+    }
+    .vsIcon{
+      --stopTop: 75vh;
+      --stopLeft: 12vw;
+    }
+    .jsonIcon{
+      width: 10vw;
+      --stopTop: 35vh;
+      --stopLeft: 40vw;
+    }
+    .mysqlIcon{
+      width: 8vw;
+    }
+    .javaIcon{
+      --stopTop: 40vh;
+      --stopLeft: 15vw;
+    }
+    .imgStyle{
+      margin-top: -150px;
+    };
+  }
+  
+ 
+}
+
+
+/*-------------------------------------------------
+---------------------------------------------------*/
+
+@media only screen and (max-width: 950px) {
+  nav{
+    position: fixed;
+    top: 0;
+    height: 4.5vh;
+    z-index: 9999;
+  }
+  .container2> :first-child{
+    font-size: 3.2vw;
+  }
+  .container2> p{
+    margin-left: 0vw;
+    width: 100%;
+    font-size: 2.7vw;
+  }
+  .container3 {
+    width: 200px;
+    height: 200px;
+  }
+  .nawNormal {
+    clear: both;
+    width: 100vw;
+    height: 150px;
+    top: 0;
+    z-index: 100001;
+    position: fixed;
+    background-color: var(--backgroundColor);
+    visibility: visible;
+    border-bottom-style: 1px var(--backgroundColor2);
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--backgroundColor2);
+  }
+  .nawHidden{
+    visibility: hidden;
+  }
+  
+  li {
+    width: 100vw;
+    min-height: 30px;
+    margin-left: auto;
+    cursor: pointer;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+  }
+  .nawNormal>:nth-child(2n){
+    background-color:var(--backgroundColor3);
+  }
+  li > img {
+    clear: both;
+    display: "inline-block";
+    width: 20px;
+  }
+  .styleP {
+    display: "inline-block";
+    font-size: 20px;
+    text-decoration: "none";
+    margin-left: 10px;
+  }
+  .icon{
+    z-index: 999;
+    position: absolute;
+  }
+  .hamburgerVisable{
+    visibility: visible;
+  }
+  .hamburger:hover{
+    transform: scale(1.1, 1.1);
+  }
+  .belki{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.8vh;
+    border-radius: 15px;
+  }
+  .belki:first-child {
+    width: 3vh;
+    height: 0.7vh;
+    background-color: var(--batoonColor);
+  }
+  .belki:nth-last-child(2) {
+    width: 5vh;
+    height: 0.9vh;
+    background: var(--backgroundColor2);
+  }
+  .belki:last-child {
+    width: 3vh;
+    height: 0.7vh;
+    background: var(--batoonColor);
+  }
+  section{
+    margin-top: 4.6vh;
+    padding: 0;
+    min-height: 95.4vh;
+    display: block;
+    position: absolute;
+
+  }
+  article{
+    margin-top: 0;
+    padding-top: 5px;
+    height: 93.5vh;
+  }
+  section> article> .container2{
+    height: 70vh;
+  }
+  .title{
+    margin-top: 1vh;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+  }
+ .title > img{
+    margin-top: 0vh;
+    width: 3.5vh;
+    height: 3.5vh;
+    margin-left: -1vw;
+  }
+ .title> h1{
+    font-size: 4vh;
+    justify-content: flex-end;
+  }
+  .containerSeventeen{
+    clear: both;
+    margin-right: 1vw;
+    text-align: center;
+    width: 98vw;
+    height: 35vh;
+    position: absolute;
+    z-index: 999;
+    text-align: center;
+    background-color: var(--backgroundColor1);
+    --visibility: hidden;
+    visibility: (--visibility);
+    --stopTop: 50vh;
+    --stopLeft: 1vw;
+    --startLeftAnimation: -100vw;
+    --startTopAnimation: 90vh;
+    margin-left: var(--startLeftAnimation);
+    animation-name: animationShifted;
+    animation-delay: 0.2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  .containerSeventeen> .imgStyle2{
+    margin-top: 0vh;
+    width: 25vw;
+    height: 100%;
+  }
+  .containerEighteen{
+    clear: both;
+    width: 98vw;
+    height: 45vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 1vh;
+    position: static;
+    display: block;
+    z-index: 99;
+    text-align: center;
+    --visibility: hidden;
+    visibility: (--visibility);
+    --stopTop: 1vh;
+    --stopLeft: 1vw;
+    --startLeftAnimation: -100vw;
+    --startTopAnimation: 90vh;
+    margin-left: var(--startLeftAnimation);
+    animation-name: animationShifted;
+    animation-delay: 0.2s;
+    animation-duration: 0s;
+    animation-fill-mode: forwards;
+  }
+  .containerEighteen> .containerFour{
+    clear: both;
+    width: 96vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    position: absolute;
+    text-align: center;
+    margin-top: -22vh;
+  }
+  .containerEighteen> .containerFour> .socialMedia{
+    clear: both;
+    width: 98vw;
+    height: 5vh;
+    margin-left: -1vw;
+    text-align: center;
+  }
+  .containerEighteen> .containerFour> .socialMedia> a> .fbIcon {  
+    width: 9vw;
+    --stopTop: 0vh;
+    --stopLeft: 31.5vw;
+  }
+  .containerEighteen> .containerFour> .socialMedia> a> .githubIcon {
+    width: 9vw;
+    --stopTop: 0vh;
+    --stopLeft: 5vw;
+  }
+  .containerEighteen> .containerFour> .socialMedia> a> .inIcon {
+    width: 9vw;
+    --stopTop: 0vh;
+    --stopLeft: 5vw;
+  }
+  .containerEighteen> .containerFour> h1{
+    width: 96vw;
+    font-size: 5vw;
+    margin-top: 0vh;
+  }
+  .containerEighteen> .containerFour> p{
+    font-size: 3vw;
+    margin-top: 2vh;
+    text-align: justify;
+  }
+  .containerFive{
+    clear: both;
+    height: 85.2vh;
+    background-size: 40vw;
+    }
+  .containerFive> p{
+    font-size: 3vw;
+  }
+  .containerSeven{
+    clear: both;
+    margin-top: 1vw;
+    margin-right: 2vw;
+    min-width: 9vw;
+    text-align: center;
+  }
+  .containerSeven> img{
+    margin-left: -0vw;
+    position: relative;
+    width: 100%;
+  }
+  .containerSeven> p{
+    font-size: 2vw;
+    color: var(--fontColor);
+    text-shadow: 2px 1px 3px black;
+  }
+  section> .containerThirteen{
+    margin-top: 1vh;
+    font-size: 8vw;
+  }
+  .containerFourteen{
+    width: 100vw;
+    height: 100vw;
+    padding-top: 2vh;
+    padding-bottom: 10vh;
+  }
+  .containerFourteen> .containerThirteen> p{
+    font-size: 4vw;
+  }
+  .containerNine{
+    clear: both;
+ 
+    width: 98vw;
+    height: 70vw;
+  }
+  .block{
+    width: 70vw;
+    margin-left: 15vw;
+  }
+  .phone{
+    clear: both;
+    position: absolute;
+    width: 33vw;
+    margin-top: 7%;
+    margin-left: 36.5vw;
+    margin-right: 36.5vw;
+  }
+  .containerNine:hover .phone{
+    clear: both;
+    margin-left: 35%;
+    margin-top: -8%;
+  }
+  .containerFifteen{
+    width: 65%;
+    height: 50%;
+    margin-left: 19%;
+    margin-right: 21%;
+    margin-top: 35%;
+    
+  }
+  .containerFifteen> p{
+    width: 98%;
+    font-size: 2vw;
+  }
+  .containerFifteen> .containerSeven{
+    clear: both;
+    width: 8vw;
+    height: 40px;
+    position: relative;
+    margin-top: 3vw;
+    margin-right: 1%;
+    font-size: 8vw;
+  }
+  .containerFifteen> .containerSeven> .icon{
+    clear: both;
+    position: relative;
+    width: 8vw;
+    margin-top: -2px;
+  }
+  .containerFifteen> .containerSeven> p{
+    font-size: 1.8vw;
+  }
+  .containerContact{
+    clear: both;
+    width: 98vw;
+    margin-top: 4vh;
+    height: 91.5vh;
+    margin-left: 1vw;
+    text-align: center;
+  }
+  .containerSexteen{
+    margin-top: 1vh;
+    width: 98vw;
+    height: 18vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    position: static;
+
+  }
+  .containerSexteen > p{
+    font-size: 4vw;
+    text-align: center;
+    color: var(--fontColor);
+  }
+  .containerSexteen> .contact{
+    width: 95vw;
+    height: 2.5vh;
+    margin-left: 0vh;
+    margin-top: 1vh;
+    text-align: center;
+  }
+  .contact> a{
+    display: inline;
+    font-size: 4vw;
+    width: 60vw;
+    float: left;
+    margin-top: 0.3vh;
+    margin-left: -35vw;
+  } 
+  .containerSexteen> .socialMedia{
+    clear: both;
+    width: 98vw;
+    height: 5vh;
+    margin-left: -1vw;
+    margin-top: 1vh;
+    text-align: center;
+  }
+  .containerSexteen> .socialMedia> a> .fbIcon {  
+    width: 7vw;
+    --stopTop: 0vh;
+    --stopLeft: 31.5vw;
+  }
+  .containerSexteen> .socialMedia> a> .githubIcon {
+    width: 7vw;
+    --stopTop: 0vh;
+    --stopLeft: 5vw;
+  }
+  .containerSexteen> .socialMedia> a> .inIcon {
+    width: 7vw;
+    --stopTop: 0vh;
+    --stopLeft: 5vw;
+  }
+  .contact> img{
+    width: 5.5vw;
+    display: inline;
+    position: relative;
+    float: left;
+    clear: both; 
+    margin-left: 10vw; 
+  }
+  .containerTwenty{
+    display: block;
+    width: 98vw;
+    margin-right: 1vw;
+    height: 35vh;
+    position: static;
+    --visibility: hidden;
+    visibility: (--visibility);
+    --stopTop: auto;
+    --stopLeft: 1vw;
+    --startLeftAnimation: -100vw;
+    --startTopAnimation: 90vh;
+    margin-left: var(--startLeftAnimation);
+    animation-name: animationShifted;
+    animation-delay: 0.7s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  .containerTwenty> form> label {
+    font-size: 3vw;
+  }
+  .containerTwenty> form> input[type=text]{
+    width: 30vw;
+    height: 20px;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 1px;
+    background-color: var(--batoonColor);
+    font-size: 15px;
+    color: var(--fontColor);
+  }
+  input[type=button], input[type=submit], input[type=reset]{
+    width: 8vh;
+    height: 5vh;
+    margin-top: 1vh;
+    margin-right: 2vw;
+    font-size: 3.5vw;
+    float: right;
+    border: none;
+    color: var(--fontColor);
+    text-align: center;
+  }
+  input[type=submit]:hover{
+    border: 1px solid var(--fontColor);
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .article>.title{
+    width:100%;
+    margin-top: 2vw;
+    position: static;
+    height: 8vw;
+    text-align: center;
+    
+  }
+  .article> .title> img{
+    display: inline-block;
+    width: 6vw;
+  }
+  .article> .title> h1{
+    display: inline-block;
+    font-size: 8vw;
+    margin-left: 2vw;
+    color: var(--fontColor);
+    position:relative;
+  }
+  .containerTwentyTwo {
+    display: block;
+    margin-top: auto;
+    clear:both;
+    width: 98vw;
+    height: 25vh;
+    margin-right: 1vw;
+    text-align: center;
+    position: static;
+    --visibility: hidden;
+    visibility: (--visibility);
+    --stopTop: 0vh;
+    --stopLeft: 1vw;
+    --startLeftAnimation: -100vw;
+    --startTopAnimation: 90vh;
+    margin-left: var(--startLeftAnimation);
+    animation-name: animationShifted;
+    animation-delay: 0.7s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  .containerTwentyTwo> img{
+    width: 20vw;
+    height:30vh;
+    margin-top: -5vh;
+  }
+  .first {
+    margin-top: 1vh;
+    font-size: 8vw;
+  }
+  .first> .containerThirteen> p{
+    font-size: 4vw;
+  }
+  footer{
+    height: 2vh;
+    padding-top: 0.5vh;
+    position: fixed;
+    bottom: 0;
+  }
+  footer> p{
+    margin-top: 0vh;
+    font-size: 2vw;
+  }
+  .imgStyle{
+    width: 30vw;
+    margin-top: -72px;
+  }
+  .containerTwentyThry{
+    width: 100vw;
+    height: 93vh;
+    float: left;
+    margin-left: 0;
+    position: absolute;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-top: 1vh; 
+    text-align: left;
+    margin-bottom: 3vh;
+    background-color: var(--backgroundColor)
+  }
+  .containerTwentyThry> h3{
+    font-size: 3.7vw;
+    text-align: center;
+  }
+  .containerTwentyThry> h4{
+    margin-top: 1vh;
+    font-size: 2.8vw;
+    margin-left: 5vw;
+  }
+  .containerTwentyThry> p{
+    margin-top: 1vh;
+    font-size: 2.1vw;
+    text-align: justify;
+  }
+  .containerTwentyFour{
+    width: 100vw;
+    min-height: 20px;
+    margin-left: auto;
+    padding: 1vw;
+    font-size: 6px;
+    color: var(--backgroundColor2);
+    text-align: justify;
+    --visibility: hidden;
+    visibility: (--visibility);
+    --stopTop: 0vh;
+    --stopLeft: 0vw;
+    --startLeftAnimation: -100vw;
+    --startTopAnimation: 90vh;
+    margin-left: var(--startLeftAnimation);
+    animation-name: animationShifted;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  textarea{
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 100px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: var(--batoonColor);
+    font-size: 10px;
+    color: var(--fontColor);
+    resize: none;
+  }
+  .announcementGdpr{
+    font-size: 10px;
+  }
+  .container3> .icon2{
+    width: 10vw;
+  }
+  .wpIcon{
+    width: 14vw;
+    --stopTop: 70vh;
+    --stopLeft: -12vw;
+  }
+  .vsIcon{
+    --stopTop: 59vh;
+    --stopLeft: 22vw;
+  }
+  .jsonIcon{
+    width: 14vw;
+    --stopTop: 55vh;
+    --stopLeft: 52vw;
+  }
+  .mysqlIcon{
+    width: 14vw;
+  }
+  @media all and (orientation:landscape) {
+    nav {
+      width: 100vw;
+      height: 8vh;
+      padding-top: 1vh;
+      padding-right: 10vw;
+      padding-bottom: 1vh;
+      display: block;
+      background-color: var(--backgroundColor);
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      border-bottom-color: var(--backgroundColor2);
+      z-index: 10000;
+      position: fixed;
+    }
+    nav > .logo {
+      width: 10vh;
+      height: 10vh;
+      margin-top: 2vh;
+      margin-left: 2vw;
+      display: inline-block;
+      z-index: 1002;
+    }
+    nav > .logo > img{
+      height: 100%;
+    } 
+    .nawNormal {
+      float: right;
+      width: 60vw;
+      height: 8vh;
+      list-style: none;
+      margin-left: 35vw;
+      position: absolute;
+      animation-name: menuAnimate;
+      animation-delay: 0.2s;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      z-index: 10002;
+      visibility: visible;
+      border: none;
+      background: none;
+      padding-top: 2vh;
+    }
+    li {
+      all: unset;
+      min-width: 5vw;
+      min-height: 3vh;
+      text-align: center;
+      display: inline-block;
+      position: relative;
+      z-index: 100001;
+      cursor: pointer;
+      color: var(--fontColor);
+      margin-left: 10px;
+      text-align: center;
+      border-radius: 0;
+      visibility: visible;
+      background: none;
+      padding-top: 0.1vh;
+      padding-bottom: 0.1vh;
+    }
+    .nawNormal>:nth-child(2n){
+      background: none;
+    }
+    li > img {
+      display: inline-block;
+      width: 1.5vw;
+      margin-left: 0.5vh;
+    }
+    .styleP {
+      display: inline-block;
+      margin: auto;
+      font-size: 3.5vh;
+      text-decoration: "none";
+      margin-left: 0.3vw;
+      margin-right: 0.3vw;
+      text-shadow: 2px 1px 2px black;
+    }
+    li:hover {
+      margin-top: 0.1vh;
+      border-width: 1px;
+      border-style: solid;
+      border-color: var(--fontColor);
+      border-radius: 5px;
+    }
+    li:active {
+      background:var(--backgroundColor);
+      background: linear-gradient(
+        0deg,
+        var(--backgroundColor) 0%,
+        var(--fontColor) 99%
+      );
+    }
+    .hamburger{
+      visibility: hidden;
+    }
+    section{
+      min-height: 60vh;
+      margin-top: 8vh;
+
+    }
+    article{
+      min-height: 60vh;
+      background: none;
+    }
+    .title{
+      height: 10vh;
+    }
+    .title> img{
+      width: 8vh;
+      height: 8vh;
+    }
+    .title> h1{
+      font-size: 9vh;
+    }
+    footer{
+      all: unset;
+      width: 100vw;
+      height: 4vh;
+      position: fixed;
+      text-align: center;
+      z-index: 10000;
+      bottom:  0;
+      height: 4vh;
+      text-align: center;
+      background-color: var(--backgroundColor);
+    }
+    footer > p{
+      all: unset;
+      padding-bottom: 0.1vh;
+      min-height: 1vh;
+      font-size: 3vh;
+    }
+    .container3> .icon2{
+      width: 4vw;
+    }
+    .cIcon {  
+      --stopTop: -10vh;
+      --stopLeft: 35vw;
+    }
+    .imgStyle{
+      position: relative;
+      top: -20vh;
+      width: 20vw;    
+    }
+    .mysqlIcon{
+      width: 10vw;
+      --stopTop: -10vh;
+      --stopLeft: -18vw;
+    }
+    .javaIcon{
+      --stopTop: 35vh;
+      --stopLeft: 25vw;
+    }
+    .jsIcon {
+      --stopTop: 10px;
+      --stopLeft: -60px;
+    }
+    .htmlIcon {
+      --stopTop: 10px;
+      --stopLeft: -19px;
+    }
+    .reactIcon {
+      --stopTop: 40px;
+      --stopLeft: -50px;
+    } 
+    .cssIcon {
+      --stopTop: 178px;
+      --stopLeft: -50px;
+      position: absolute;
+      width: 150px;
+    }
+    .phpIcon {
+      --stopTop: 10vh;
+      --stopLeft: -18vw;
+    }
+    .wpIcon{
+      width: 10vw;
+      --stopTop: 50vh;
+      --stopLeft: -22vw;
+    }
+    .jqueryIcon{
+      --stopTop: 15vh;
+      --stopLeft: 20vw;
+    }
+    .jsonIcon{
+      width: 10vw;
+      --stopTop: 60vh;
+      --stopLeft: 2vw;
+    }
+    .containerEighteen >.containerFour > p{
+      font-size: 3vh;
+    }
+    .containerSeventeen> .imgStyle2{
+      margin-top: 20vh;
+      width: 20vw;
+      height: 100vh;
+      margin-bottom: 10vh;
+    }
+    .containerFive{
+      min-width: 96vw;
+      min-height: 110vw;
+      margin-left: 1vw ;
+      margin-right: 1vw ;
+      padding: 1vw;
+      padding-bottom: 50vh;
+      background-size: 30vw;
+      background-color: var(--backgroundColor);
+      background-image: url(C:\Users\kanan\Desktop\Projekt_Portfolio\Portfolio\portfolio\src\components\images\on_the_cheir1.png); 
+      background-position: right bottom;
+      background-repeat: no-repeat;
+    }
+    .containerSexteen{
+      height: 60vh;
+    }
+    .containerSexteen> .contact{
+      height: 13vh;
+    }
+    .containerSexteen> .contact > a{
+      padding-top: 2vh;
+    }
+    .containerTwentyFour{
+      font-size: 1.5vw;
+    }
+    input[type=button], input[type=submit], input[type=reset]{
+      background-color: var(--backgroundColor);
+      color: var(--backgroundColor1);
+      width: 10vw;
+      height: 4vw;
+      margin-top: 1vh;
+      margin-right: 1vw;
+      font-size: 2vw;
+      float: right;
+      border: none;
+      color: var(--fontColor);
+      text-align: center;
+    }
+    .containerTwentyTwo > img{
+      height: 100vh;
+      margin-bottom: 10vh;
+    }
+    .containerTwenty> form> label{
+      font-size: 2vw;
+    }
+    .containerTwenty{
+      position: relative;
+      width: 100vw;
+      height: 65vh;
+      --stopLeft: 0vw;
+      background-color: var(--backgroundColor)
+    }
+    .containerTwentyTwo{
+      position: relative;
+      width: 100vw;
+      height: 105vh;
+      margin-right: 0;
+      --stopLeft: 0vw;
+      z-index: 10000;
+      background-color: var(--backgroundColor)
+    }
+  }
+}
+@media only screen and (max-width: 430px) {
+  .phpIcon{
+    --stopTop: 50vh;
+    --stopLeft: -18vw; 
+  }
+  .javaIcon{
+    --stopTop: 40vh;
+    --stopLeft: 45vw;
+  }
+  .vsIcon{
+    --stopTop: 40vh;
+    --stopLeft: 15vw;
+  }
+ @media only screen and (max-height: 668px) {
+    .phpIcon{
+      --stopTop: 50vh;
+      --stopLeft: -18vw; 
+    }
+    .javaIcon{
+      --stopTop: 40vh;
+      --stopLeft: 45vw;
+    }
+    .vsIcon{
+      --stopTop: 50vh;
+      --stopLeft: 20vw;
+    }
+  }
+}
+@media only screen and (max-width: 376px) {
+  .hamburger{
+    margin-top: 0.7vh;
+  }
+}
+/*----------------------- Animacje ----------------------*/
+@keyframes moveIcon {
+  0% {
+   
+    margin-top: 50vh;
+    margin-left: 50vw;
+    width: 0.1vw;
+  }
+  70% {
+    width: 10vw;
+  }
+  100% {
+    margin-top: var(--stopTop);
+    margin-left: var(--stopLeft);
+    visibility: visible;
+  }
+}
+@keyframes menuAnimate {
+  0% {
+    margin-top: -5vh;
+  }
+  100% {
+    margin-top: 0vh;
+  }
+}
+@keyframes textAnimate {
+  0% {
+    margin-left: 20vw;
+  }
+  100% {
+    margin-left: -11vw;
+  }
+}
+@keyframes headAnimate {
+  0% {
+    margin-top: 110vh;
+  }
+  100% {
+    bottom: 2vh;
+  }
+}
+@keyframes moveMediaIcon {
+  0% {
+    visibility: visible;
+    margin-top: 30vh;
+    margin-left: 5vw;
+    width: 0.1vw;
+  }
+  50% {
+    width: 3vw;
+  }
+  100% {
+    margin-top: var(--stopTop);
+    margin-left: var(--stopLeft);
+    visibility: visible;
+  }
+}
+@keyframes moveMediaIconTwo {
+  0% {
+    visibility: visible;
+    margin-top: 30vh;
+    margin-left: 5vw;
+    width: 0.1vw;
+  }
+  50% {
+    width: 5vw;
+  }
+  100% {
+    margin-top: var(--stopRight);
+    margin-left: var(--stopLeft);
+    visibility: visible;
+  }
+}
+@keyframes moveSkillIcon {
+  0% {
+    margin-left: 1vw;
+    visibility: visible;
+    margin-top: 35vh;
+    margin-left: 20vw;
+    width: 0.1vw;
+  }
+  100% {
+    position: relative;
+    margin-top: var(--stopRight);
+    margin-left: var(--stopLeft);
+    visibility: visible;
+  }
+}
+@keyframes animateJsIcon {
+  0% {
+    margin-left: -5vh;
+  }
+  100% {
+    margin-right: 0vh;
+  }
+}
+@keyframes textAnimate2 {
+  0% {
+    visibility: visible;
+    margin-left: -10vw;
+  }
+  100% {
+    visibility: visible;
+    margin-left: 0vw;
+  }
+}
+@keyframes a1 {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+    margin-left: 13vh;
+  }
+}
+@keyframes animationShifted{
+  0% {
+    --visibility: visible;
+    margin-top: var(--startTopAnimation);
+    margin-left: var(--startLeftAnimation);
+  }
+  100% {
+    margin-top: var(--stopTop);
+    margin-left: var(--stopLeft);
+  }
+}
+@keyframes animationIconReactHover{
+  0% {
+      margin-left:  40px;
+      margin-top: 162px;
+  }
+  100% {
+
+      margin-left:  50px;
+      margin-top: 172px;
+  }
+}

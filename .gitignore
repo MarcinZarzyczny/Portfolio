@@ -1,0 +1,11 @@
+# production
+/build
+#else
+**/images
+**/favicon.ico
+**/robots.txt
+**/vscode
+**/node_modules
+**/robots.txt
+**/package-lock.json
+**package.json
